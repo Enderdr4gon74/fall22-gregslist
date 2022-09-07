@@ -4,13 +4,15 @@ import { generateId } from '../Utils/generateId.js'
 export class Car {
   /**
    * The data needed to make a car
-   * @param {{make: string, model: string, year: number, price: number, description: string, imgUrl: string, id?:string}} data 
+   * @param {{make: string, model: string, year: number, price: number, engineLitre: number, engineCylinder: number, description: string, imgUrl: string, id?:string}} data 
    */
   constructor(data) {
     this.id = data.id || generateId()
     this.make = data.make
     this.model = data.model
     this.year = data.year
+    this.engineLitre = data.engineLitre
+    this.engineCylinder = data.engineCylinder
     this.price = data.price
     this.description = data.description
     this.imgUrl = data.imgUrl || 'https://www.autolist.com/assets/listings/default_car.jpg'
@@ -25,7 +27,7 @@ export class Car {
         <img src="${this.imgUrl}" alt="${this.make}-${this.model}" class="img-fluid">
         <div class="card-body">
           <h5 class="text-uppercase">
-            ${this.make} | ${this.model} ${this.year}
+            ${this.year} - ${this.make} ${this.model} - ${this.engineLitre} Liter ${this.engineCylinder} Cylinder
           </h5>
           <p>
             <strong>$ ${this.price}</strong>

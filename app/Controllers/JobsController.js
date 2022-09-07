@@ -6,8 +6,8 @@ function drawJobs() {
     <h1>YOUR JOB STARTS HERE</h1>
   </div>
   `)
-}
 
+}
 
 export class JobsController {
   constructor() {
