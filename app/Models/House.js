@@ -10,7 +10,7 @@ export class House {
     this.imgUrl = data.imgUrl
     this.year = data.year
     this.price = data.price
-    this.description = data.description || null
+    this.description = data.description
   }
 
   get houseCardTemplate() {
